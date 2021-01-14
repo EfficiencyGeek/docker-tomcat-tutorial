@@ -10,7 +10,7 @@ A basic tutorial on running a web app on Tomcat using Docker
     *   Sample App: http://localhost/sample 
     *   Tomcat Samples: http://localhost/examples
     *   Tomcat Docs: http://localhost/docs
-* While the docker tomcat instance is running, get a shell session via: `docker exec -it mywebappcontainer /bin/bash`
+* While the docker tomcat instance is running, get a shell session via: `./runme.sh bash`
 * In the docker tomcat session, press control-c to stop tomcat.
 * Remove the container: `docker rm "mywebapp"`
 * Remove the image: `docker rmi "mywebapp"`
