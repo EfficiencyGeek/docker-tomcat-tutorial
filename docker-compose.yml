@@ -1,0 +1,21 @@
+# Access via "http://localhost:8080"
+#   (or "http://$(docker-machine ip):8080" if using docker-machine)
+#
+
+version: '3.6'
+
+services:
+
+  tomcat:
+    # docker run --name drupal-test -p 8080:80 --link drupal-mysql:mysql -d drupal    
+    # docker run --name mywebappcontainer -p 80:8080 mywebapp
+    #restart: always
+    build: 
+      context: .
+    container_name: mywebapp
+    ports:
+      - 80:8080
+    # Where our data will be persisted
+    volumes:
+      - ./sample:/usr/local/tomcat/webapps/sample2
+
